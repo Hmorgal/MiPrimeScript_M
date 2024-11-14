@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ControlPlayer : MonoBehaviour
 {
 
-    public int speed = 5;
+    public int speed = 8;
 
     int CONTADOR = 6 ;
 
@@ -24,6 +24,12 @@ public class ControlPlayer : MonoBehaviour
     void Update()
     {
         
+        if (Input.GetKey(KeyCode.Escape)){
+
+            Application.Quit();
+
+        }
+
         if (Input.GetKey(KeyCode.A)){
 
             transform.Translate(Vector3.left * Time.deltaTime * speed);
